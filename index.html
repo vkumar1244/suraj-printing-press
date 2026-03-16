@@ -1,0 +1,362 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Suraj Printing Press</title><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Cinzel:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"><style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
+
+/* animated background */
+body{
+background:linear-gradient(120deg,#e8f6ff,#f3e8ff,#ffeef4);
+background-size:400% 400%;
+animation:bgmove 12s ease infinite;
+}
+
+@keyframes bgmove{
+0%{background-position:0% 50%}
+50%{background-position:100% 50%}
+100%{background-position:0% 50%}
+}
+
+header{
+background:#0f2027;
+color:white;
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:15px
+}
+
+.logo img{
+width:70px;
+height:70px;
+border-radius:50%;
+background:white;
+padding:5px;
+object-fit:cover
+}
+
+.logo h1{
+font-family:Cinzel,serif;
+font-size:38px
+}
+
+nav a{
+color:white;
+margin-left:20px;
+text-decoration:none;
+font-weight:600
+}
+
+nav a:hover{color:#ffd369}
+
+/* image slider */
+.slider{
+width:100%;
+height:75vh;
+overflow:hidden;
+position:relative
+}
+
+.slides{
+display:flex;
+width:300%;
+animation:slide 12s infinite
+}
+
+.slides img{
+width:100%;
+object-fit:cover
+}
+
+@keyframes slide{
+0%{transform:translateX(0)}
+33%{transform:translateX(0)}
+38%{transform:translateX(-100%)}
+66%{transform:translateX(-100%)}
+71%{transform:translateX(-200%)}
+100%{transform:translateX(-200%)}
+}
+
+.hero-text{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+color:rgb(207, 49, 49);
+text-align:center
+}
+
+.hero-text h2{
+font-size:50px;
+font-family:Cinzel
+}
+
+section{padding:70px 10%}
+
+.section-title{
+font-size:32px;
+margin-bottom:30px;
+color:#0f2027
+}
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 6px 18px rgba(0,0,0,.1);
+transition:.3s
+}
+
+.card:hover{transform:translateY(-8px)}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:15px
+}
+
+.gallery img{width:100%;border-radius:10px}
+
+/* reviews */
+.reviews{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px
+}
+
+.review-card{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,.1)
+}
+
+.stars{
+color:gold;
+font-size:20px;
+animation:starpop .8s ease
+}
+
+@keyframes starpop{
+0%{transform:scale(.5);opacity:0}
+100%{transform:scale(1);opacity:1}
+}
+
+.contact-box{
+background:white;
+padding:30px;
+border-radius:12px;
+box-shadow:0 6px 18px rgba(0,0,0,.1);
+margin-bottom:25px
+}
+
+.contact-item{margin:10px 0}
+
+button{
+background:#0f2027;
+color:white;
+padding:12px 22px;
+border:none;
+border-radius:6px;
+margin-top:15px;
+cursor:pointer
+}
+
+
+
+button:hover{background:#203a43}
+
+form input,form textarea{
+width:100%;
+padding:12px;
+margin-top:10px;
+border:1px solid #ccc;
+border-radius:6px
+}
+
+footer{
+background:#0f2027;
+color:white;
+text-align:center;
+padding:20px
+}
+
+#instagram{
+padding:70px 10%;
+text-align:center;
+background:linear-gradient(120deg,rgb(250, 84, 195),#fca0c8);
+}
+/* floating whatsapp */
+.whatsapp{
+position:fixed;
+bottom:25px;
+right:25px;
+background:#25D366;
+color:white;
+font-size:28px;
+width:60px;
+height:60px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+box-shadow:0 4px 12px rgba(0,0,0,.3);
+z-index:1000
+}
+
+.whatsapp:hover{transform:scale(1.1)}
+
+</style></head><body><header>
+<div class="logo">
+<img src="logo.png" alt="logo">
+<h1>Suraj Printing Press</h1>
+</div><nav>
+<a href="#services">Services</a>
+<a href="#gallery">Gallery</a>
+<a href="#reviews">Reviews</a>
+<a href="#contact">Contact</a>
+</nav>
+</header><!-- slider --><div class="slider">
+<div class="slides">
+<img src="slide1.png">
+<img src="slide2.png">
+<img src="slide3.png">
+</div><div class="hero-text">
+<h2>Professional Printing Solutions</h2>
+<p>• Visiting Cards • Wedding Cards • Flex • Posters • Bill Books</p>
+</div>
+</div><section id="services">
+<h2 class="section-title" data-aos="fade-up">Our Services</h2>
+<div class="services">
+<div class="card" data-aos="zoom-in"><h3>Visiting Cards</h3><p>Premium business cards.</p></div>
+<div class="card" data-aos="zoom-in"><h3>Flex & Banners</h3><p>Event and advertisement banners.</p></div>
+<div class="card" data-aos="zoom-in"><h3>Wedding Cards</h3><p>Beautiful invitation cards.</p></div>
+<div class="card" data-aos="zoom-in"><h3>Bill Books</h3><p>Invoice and bill book printing.</p></div>
+<div class="card" data-aos="zoom-in"><h3>Posters</h3><p>Large promotional posters.</p></div>
+<div class="card" data-aos="zoom-in"><h3>Stickers</h3><p>Custom sticker printing.</p></div>
+<div class="card" data-aos="zoom-in"><h3>ID Cards</h3><p>Custom ID Cards</p></div>
+<div class="card" data-aos="zoom-in"><h3>Frames</h3><p>Custom Photo Frames</p></div>
+<div class="card" data-aos="zoom-in"><h3>Sun Board</h3><p>Custom Sun Board</p></div>
+<div class="card" data-aos="zoom-in"><h3>Pumplet</h3><p>Custom Pumplets</p></div>
+<div class="card" data-aos="zoom-in"><h3>Cups</h3><p>Custom Cup Printing</p></div>
+<div class="card" data-aos="zoom-in"><h3>T Shirt</h3><p>Customised T Shirt Printing</p></div>
+<div class="card" data-aos="zoom-in"><h3>Mousepads</h3><p>Custom Mousepads</p></div>
+<div class="card" data-aos="zoom-in"><h3>Vinayal</h3><p>Custom Vinayal</p></div>
+<div class="card" data-aos="zoom-in"><h3>Crystal Photo</h3><p>Custom Crystal Photo Frames</p></div>
+<div class="card" data-aos="zoom-in"><h3>Pillowcover</h3><p>Custom Pillowcovers</p></div>
+<div class="card" data-aos="zoom-in"><h3>Bottles and Magic Cups</h3><p>Custom Bottles and Magic cups</p></div>
+<div class="card" data-aos="zoom-in"><h3>Round Lamps</h3><p>Custom Round Lamps</p></div>
+<div class="card" data-aos="zoom-in"><h3>Keychains and Pens</h3><p>Custom Keychains and Pens</p></div>
+<div class="card" data-aos="zoom-in"><h3>Purse</h3><p>Custom Purse Printings</p></div>
+</div>
+</section><section id="gallery">
+<h2 class="section-title">Gallery</h2>
+
+<div class="gallery">
+<img src="gallery1.png">
+<img src="gallery2.png">
+<img src="gallery5.png">
+<img src="gallery4.png">
+<img src="gallery3.png">
+<img src="gallery6.png">
+<img src="gallery8.png">
+<img src="gallery10.png">
+<img src="gallery9.png">
+<img src="gallery7.png">
+</div>
+
+</section><section id="reviews">
+<h2 class="section-title">Customer Reviews</h2><div class="reviews">
+<div class="review-card"><h4>Vishal Kumar</h4><div class="stars">★★★★★</div><p>Excellent printing quality. Do Visit</p></div>
+<div class="review-card"><h4>Anjali Tiwari</h4><div class="stars">★★★★★</div><p>Best wedding card printing.</p></div>
+<div class="review-card"><h4>Akhil Gupta</h4><div class="stars">★★★★☆</div><p>Affordable and fast service.</p></div>
+</div><div class="contact-box" style="margin-top:30px">
+<h3>Leave Your Review</h3>
+<form onsubmit="addReview(); return false;">
+<input id="reviewName" type="text" placeholder="Your Name" required>
+<select id="reviewRating">
+<option value="★★★★★">5 Stars</option>
+<option value="★★★★☆">4 Stars</option>
+<option value="★★★☆☆">3 Stars</option>
+<option value="★★☆☆☆">2 Stars</option>
+<option value="★☆☆☆☆">1 Star</option>
+</select>
+<textarea id="reviewText" rows="3" placeholder="Write your review" required></textarea>
+<button type="submit">Submit Review</button>
+</form>
+</div>
+</section><section id="contact">
+<h2 class="section-title">Contact Us</h2><div class="contact-box">
+<div class="contact-item"><i class="fa-solid fa-phone"></i> +91 7080596651</div>
+<div class="contact-item"><i class="fa-solid fa-envelope"></i> dp336220@gmail.com</div>
+<div class="contact-item"><i class="fa-solid fa-location-dot"></i>
+Pure Jeet Ki Chakiya,40 no. Gomti,Near Springer School Phaphamau Prayagraj-211013
+</div>
+<div class="contact-item">
+<a href="https://maps.app.goo.gl/JQFdmFz7MyKMGUTZ6" target="_blank">Open location in Google Maps</a>
+</div>
+</div><div class="contact-box">
+<h3>Online Order / Enquiry</h3>
+<form onsubmit="sendWhatsApp(); return false;">
+<input id="name" type="text" placeholder="Your Name" required>
+<input id="phone" type="tel" placeholder="Phone Number" required>
+<textarea id="message" rows="4" placeholder="Your printing requirement"></textarea>
+<button type="submit">Send Enquiry</button>
+</form>
+</div>
+
+<section id="instagram">
+<h2 class="section-title">Follow Us on Instagram</h2>
+<div style="text-align:center; margin-top:20px;">
+<a href="https://www.instagram.com/suraj._.printing._.press?igsh=NHpjaGllY3JjaTNx" target="_blank" 
+style="text-decoration:none; font-size:20px; color:white; background:#E1306C; padding:12px 25px; border-radius:8px; display:inline-block;">
+<i class="fab fa-instagram"></i> Follow Suraj Printing Press
+</a>
+</div>
+</section>
+
+</section><footer>
+<p>© 2026 Suraj Printing Press | Where Quality Meets Creativity</p>
+</footer><a class="whatsapp" href="https://wa.me/917080596651" target="_blank">
+<i class="fab fa-whatsapp"></i>
+</a><script>
+function sendWhatsApp(){
+let name=document.getElementById("name").value;
+let phone=document.getElementById("phone").value;
+let message=document.getElementById("message").value;
+
+let url="https://wa.me/917080596651?text="+
+"Name: "+name+"%0A"+
+"Phone: "+phone+"%0A"+
+"Requirement: "+message;
+
+window.open(url,'_blank');
+}
+
+function addReview(){
+let name=document.getElementById("reviewName").value;
+let rating=document.getElementById("reviewRating").value;
+let text=document.getElementById("reviewText").value;
+
+let review=`<div class='review-card'><h4>${name}</h4><div class='stars'>${rating}</div><p>${text}</p></div>`;
+
+document.querySelector('.reviews').insertAdjacentHTML('beforeend',review);
+}
+</script><script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script><script>AOS.init();</script></body>
+</html>
